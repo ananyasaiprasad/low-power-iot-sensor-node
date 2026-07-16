@@ -118,6 +118,22 @@ This repository includes:
 - Project documentation and implementation results
 
 ---
+## Key Results
+
+| Metric | Baseline | Optimized | Optimized + UPF |
+|--------|---------:|----------:|----------------:|
+| Total Power | **1.67 mW** | **68.8 µW** | **0.917 µW** |
+| Power Reduction | — | **95.88%** | **99.95%** |
+
+---
+
+### Project Outcome
+
+- Reduced total power consumption from **1.67 mW** to **0.917 µW**.
+- Achieved an overall **99.95% reduction** in total power through SDC optimization and UPF-based power management.
+- Demonstrated the effectiveness of integrating timing optimization with structured low-power design techniques for ASIC-based IoT applications.
+
+---
 
 ## Author
 
