@@ -1,37 +1,27 @@
 # Ultra-Low Power IoT Sensor Node
 
-## Overview
-
-This repository documents the design and optimization of an ultra-low power IoT sensor node implemented using industry-standard ASIC design methodologies.
-
-The objective of this project was to investigate power-aware digital design techniques and evaluate their impact on power consumption, timing performance, and overall design quality. The implementation compares a conventional sensor node with progressively optimized versions using timing constraint optimization and Unified Power Format (UPF)-based power management.
-
-The project was developed using Cadence Genus as part of an academic ASIC design workflow.
+An ASIC implementation of an ultra-low power IoT sensor node demonstrating low-power digital design techniques using Verilog HDL, Synopsys Design Constraints (SDC), and Unified Power Format (UPF). The project explores power optimization strategies by comparing a baseline implementation with progressively optimized designs.
 
 ---
 
-## Project Objectives
+## Project Overview
 
-- Design a functional IoT sensor node in Verilog HDL
-- Apply timing constraint optimization using SDC
-- Implement power-aware design using UPF
-- Analyze timing, area, and power characteristics
-- Compare baseline and optimized implementations
+Battery-operated IoT devices demand highly energy-efficient hardware to maximize operational lifetime. This project investigates the impact of timing optimization and power-aware design methodologies on an ASIC-based IoT sensor node.
+
+The implementation follows a standard ASIC synthesis flow using Cadence Genus and evaluates multiple design configurations through timing, area, power, and Quality of Results (QoR) analysis.
 
 ---
 
-## Low-Power Design Techniques
+## Key Features
 
-The optimized implementation incorporates several low-power design methodologies, including:
-
-- Clock gating
-- Power gating
-- Always-on power domain
-- Core power domain
-- State retention
-- Isolation cells
+- RTL implementation in Verilog HDL
+- Logic synthesis using Cadence Genus
+- Timing optimization using SDC
+- UPF-based power intent implementation
+- Clock gating and power gating
 - Multi-voltage power domains
-- Sleep and wake-up management
+- Power, timing, area and QoR analysis
+- Comparative evaluation of multiple design configurations
 
 ---
 
@@ -47,75 +37,93 @@ Functional Verification
 Logic Synthesis
       │
       ▼
-Timing Constraint Optimization
+Timing Constraint Optimization (SDC)
       │
       ▼
-UPF-Based Power Intent
+Power Intent Specification (UPF)
       │
       ▼
-Power Analysis
+Power, Timing & Area Analysis
       │
       ▼
-Timing and Area Evaluation
+Design Comparison
 ```
 
 ---
 
-## Experimental Configurations
-
-The project evaluates multiple implementation scenarios:
-
-| Configuration | Description |
-|--------------|-------------|
-| Baseline Design | Original RTL implementation |
-| Optimized SDC | Timing constraint optimization |
-| UPF Implementation | UPF-based power intent |
-| Optimized Design | Combined SDC and UPF optimization |
-
----
-
-## Repository Structure
+## Project Structure
 
 ```text
-docs/
-    Project documentation
+low-power-iot-sensor-node/
 
-images/
-    Architecture diagrams
-    RTL schematics
-    Power analysis
-    Timing analysis
-
-results/
-    Summary tables and implementation results
+├── docs/            Project documentation
+├── rtl/             Verilog source files
+├── constraints/     SDC constraint files
+├── upf/             UPF power intent
+├── scripts/         Cadence Genus TCL scripts
+├── reports/         Power, timing, area and QoR reports
+├── images/          Architecture diagrams and screenshots
+└── README.md
 ```
 
 ---
 
-## Documentation
+## Design Configurations
 
-The repository includes:
+The project compares four different implementations to evaluate the effectiveness of low-power optimization techniques.
 
-- Project report
-- Design methodology
-- Experimental results
-- ASIC implementation flow
-- Power optimization analysis
+| Configuration | SDC | UPF | Purpose |
+|---------------|:---:|:---:|---------|
+| Baseline | ✗ | ✗ | Reference implementation |
+| Optimized SDC | ✓ | ✗ | Timing optimization |
+| UPF Implementation | ✗ | ✓ | Power-aware implementation |
+| Optimized Design | ✓ | ✓ | Combined low-power optimization |
 
 ---
 
-## Important Note
+## Tools Used
 
-The original RTL source code, UPF files, SDC constraints, TCL scripts, and generated implementation files are not included in this repository because they were developed using licensed university EDA tools and proprietary technology libraries.
+| Tool | Purpose |
+|------|---------|
+| Verilog HDL | RTL Design |
+| Cadence Genus | Logic Synthesis |
+| SDC | Timing Constraints |
+| UPF | Power Intent Specification |
+| TCL | Design Automation |
 
-This repository focuses on documenting the design methodology, implementation flow, and experimental results.
+---
+
+## Results
+
+The optimized implementation demonstrates improvements in power efficiency through:
+
+- Reduced switching activity using clock gating
+- Leakage reduction through power gating
+- Structured power management using UPF
+- Improved synthesis quality using optimized timing constraints
+
+Detailed synthesis reports and implementation results are available in the `reports/` directory.
+
+---
+
+## Repository Contents
+
+This repository includes:
+
+- RTL source code
+- SDC constraint files
+- UPF power intent files
+- Cadence Genus synthesis scripts
+- Timing, power, area and QoR reports
+- Project documentation and implementation results
 
 ---
 
 ## Author
 
-Ananya Sai Prasad
+**Ananya Sai Prasad**
 
-B.Tech Electronics and Communication Engineering (VLSI Design and Technology)
+B.Tech Electronics and Communication Engineering  
+(VLSI Design and Technology)
 
 VIT University, Vellore
